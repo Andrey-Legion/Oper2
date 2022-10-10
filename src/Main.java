@@ -12,7 +12,7 @@ public class Main {
         //Task2
         //Ниже  использовал вложенный оператор ветвления,не смог придумать,как обойтись без него, может через логического оператора..
         byte clientOS1 = 0;
-        short clientDeviceYear = 2014;
+        short clientDeviceYear = 2015;
         if (clientOS1 == 0) {
             if (clientDeviceYear >= 2015) {
                 System.out.println("Установите версию приложения для iOS по ссылке");
@@ -27,9 +27,9 @@ public class Main {
             }
         }
         //Task3
-        //Не возвращает результат почему-то
+
         int year = 2021;
-        if ((year%4==0) && (year%100!=0) || (year%400==0)) {
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
             System.out.println(year + " является високосным.");
 
         } else {
@@ -40,20 +40,18 @@ public class Main {
         byte deliveryDistance = 95, day = 1;
         if (deliveryDistance < 20) {
             System.out.println("Потребуется дней: " + day);
-            if (deliveryDistance >= 20 && deliveryDistance < 60) {
-                System.out.println("Потребуется дней: " + (day + 1));
-            }
-            if (deliveryDistance >= 60 && deliveryDistance < 100) {
-                System.out.println("Потребуется дней: " + (day + 2));
-            }
+        } else if ((deliveryDistance >= 20) && (deliveryDistance < 60)) {
+            System.out.println("Потребуется дней: " + (day + 1));
+        } else if ((deliveryDistance >= 60) && (deliveryDistance < 100)) {
+            System.out.println("Потребуется дней: " + (day + 2));
         } else {
             System.out.println("Нет доставки");
         }
-    }
+        }
 
         //Task5
         byte monthNumber = 12;
-        switch(monthNumber) {
+        switch (monthNumber) {
             case 12:
             case 1:
             case 2:
@@ -74,8 +72,8 @@ public class Main {
             case 11:
                 System.out.println("Осень");
                 break;
-            default;
-                System.out.println("Не существует")
-       }
+            default:
+                System.out.println("Не существует");
+        }
     }
 }

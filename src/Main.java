@@ -14,16 +14,16 @@ public class Main {
         byte clientOS1 = 0;
         short clientDeviceYear = 2014;
         if (clientOS1 == 0) {
-            if (clientDeviceYear < 2015) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
+            if (clientDeviceYear >= 2015) {
                 System.out.println("Установите версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             }
         } else if (clientOS1 == 1) {
-            if (clientDeviceYear < 2015) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else {
+            if (clientDeviceYear >= 2015) {
                 System.out.println("Установите версию приложения для Аndroid по ссылке");
+            } else {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
             }
         }
         //Task3
@@ -54,7 +54,6 @@ public class Main {
         //Task5
         byte monthNumber = 12;
         switch(monthNumber) {
-
             case 12:
             case 1:
             case 2:

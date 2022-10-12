@@ -2,8 +2,8 @@ public class Main {
     public static void main(String[] args) {
 
         //Task1
-        byte clientOS=1;
-        if (clientOS==0) {
+        byte clientOS = 1;
+        if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else {
             System.out.println("Установите версию приложения для Аndroid по ссылке");
@@ -11,42 +11,42 @@ public class Main {
 
         //Task2
         //Ниже  использовал вложенный оператор ветвления,не смог придумать,как обойтись без него, может через логического оператора..
-        byte clientOS1=0;
-        short clientDeviceYear=2015;
-        if (clientOS1==0) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-            if (clientDeviceYear<2015) {
+        byte clientOS1 = 0;
+        short clientDeviceYear = 2015;
+        if (clientOS1 == 0) {
+            if (clientDeviceYear >= 2015) {
+                System.out.println("Установите версию приложения для iOS по ссылке");
+            } else {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             }
-        } else if (clientOS1==1) {
-            System.out.println("Установите версию приложения для Аndroid по ссылке");
-        }
-            if (clientDeviceYear<2015){
+        } else if (clientOS1 == 1) {
+            if (clientDeviceYear >= 2015) {
+                System.out.println("Установите версию приложения для Аndroid по ссылке");
+            } else {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             }
+        }
+        //Task3
 
-            //Task3
-        //Не возвращает результат почему-то
-        int year=2021;
-        if (year == year / 4 && year == year / 400) {
+        int year = 2021;
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
             System.out.println(year + " является високосным.");
 
-        } else if (year==year/100) {
-            System.out.println(year+" год не является високосным");
+        } else {
+            System.out.println(year + " год не является високосным");
         }
 
         //Task4
-        byte deliveryDistance=95, day=1;
-        if (deliveryDistance<20) {
-            System.out.println("Потребуется дней: "+day);
-                if (deliveryDistance>=20 && deliveryDistance<60) {
-                    System.out.println("Потребуется дней: " + (day + 1));
-                } if (deliveryDistance>=60 && deliveryDistance<100) {
-                        System.out.println("Потребуется дней: "+(day+2));
-                    }
-            } else {
-                System.out.println("Нет доставки");
-            }
+        byte deliveryDistance = 95, day = 1;
+        if (deliveryDistance < 20) {
+            System.out.println("Потребуется дней: " + day);
+        } else if ((deliveryDistance >= 20) && (deliveryDistance < 60)) {
+            System.out.println("Потребуется дней: " + (day + 1));
+        } else if ((deliveryDistance >= 60) && (deliveryDistance < 100)) {
+            System.out.println("Потребуется дней: " + (day + 2));
+        } else {
+            System.out.println("Нет доставки");
+        }
         }
 
         //Task5
@@ -72,7 +72,8 @@ public class Main {
             case 11:
                 System.out.println("Осень");
                 break;
-            default;
-                System.out.println("Не существует")
+            default:
+                System.out.println("Не существует");
+        }
     }
 }
